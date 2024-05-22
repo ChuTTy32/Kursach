@@ -88,17 +88,17 @@ namespace crmAutoService
             {
                 conn.Open();
 
-                SqlCommand loginGetter = new SqlCommand("SELECT login_user, password_user FROM Register", conn);
+                SqlCommand loginGetter = new SqlCommand("SELECT LoginUser, PasswordUser FROM Register", conn);
                 
                 SqlDataReader loginReader = loginGetter.ExecuteReader();
                 loginReader.Read();
-                string DBlogin = loginReader["login_user"].ToString();
+                string DBlogin = loginReader["LoginUser"].ToString();
                 loginReader.Close();
 
-                SqlCommand passwordGetter = new SqlCommand("SELECT password_user FROM Register", conn);
+                SqlCommand passwordGetter = new SqlCommand("SELECT PasswordUser FROM Register", conn);
                 SqlDataReader passwordReader = passwordGetter.ExecuteReader();
                 passwordReader.Read();
-                string DBpassword = passwordReader["password_user"].ToString();
+                string DBpassword = passwordReader["PasswordUser"].ToString();
                 passwordReader.Close();
 
                     if ((DBlogin == login) & (DBpassword == pass))

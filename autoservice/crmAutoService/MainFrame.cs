@@ -38,5 +38,16 @@ namespace crmAutoService
         {
             LastPoint = new Point(e.X, e.Y);
         }
+
+        private void MainFrame_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "autoServiceDataSet.Goods". При необходимости она может быть перемещена или удалена.
+            this.goodsTableAdapter.Fill(this.autoServiceDataSet.Goods);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "autoServiceDataSet.Car". При необходимости она может быть перемещена или удалена.
+            this.carTableAdapter.Fill(this.autoServiceDataSet.Car);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "autoServiceDataSet.Client". При необходимости она может быть перемещена или удалена.
+            this.clientTableAdapter.Fill(this.autoServiceDataSet.Client);
+
+        }
     }
 }
