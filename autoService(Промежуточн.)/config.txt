@@ -1,0 +1,1 @@
+Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\chutt\OneDrive\Документы\Учеба\autoService\crmAutoService\autoService.mdf;Integrated Security=True
